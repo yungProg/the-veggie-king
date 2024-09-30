@@ -1,0 +1,153 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, 
+body {
+    font-size: 100%;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(100%, 1200px);
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8em 1.5em;
+    position: fixed;
+    top: 0;
+    width: inherit;
+    box-shadow: 0px 1px 10px 0 black;
+    z-index: 22;
+}
+
+.logo {
+    width: 80px;
+    mix-blend-mode: multiply;
+}
+
+.navigation-links {
+    display: flex;
+    gap: 1.5em;
+}
+
+.navigation-links,
+.navigation-link {
+    list-style: none;
+    font-size: 1.2rem;
+    padding: 4px;
+}
+
+.main {
+    margin-top: 110px;
+}
+
+.hero-section {
+    background: linear-gradient(90deg, #fff 70%, #0c9e0c 30%);
+    height: calc(100dvh - 110px);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+    position: relative;
+}
+
+.aux-img-wrapper, 
+.aux-img-wrapper img {
+    width: 200px;
+    position: absolute;
+    bottom: -80px;
+    left: -30px;
+    transform: rotate(335deg);
+}
+
+.hero-section-texts-wrapper {
+    z-index: 5;
+}
+
+.hero-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.hero-section-description {
+    margin-top: 1.3em;
+    margin-bottom: 1.3em;
+    color: #636363;
+}
+
+.cta-button {
+    border: none;
+}
+
+.cta-button a{
+    background-color: #ffbb00;
+    padding: 8px 12px;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.arrow-right {
+    color: #ffbb00;
+    background-color: #000;
+    border-radius: 50%;
+    padding: 2px;
+}
+
+.hero-section-images-wrapper {
+    background-color: red;
+    display: flex;
+    width: 300px;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+}
+
+.hero-img-wrapper {
+    flex: 0 0 100%;
+    animation: slideshow 35s ease-in-out infinite;
+}
+
+.hero-img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+@keyframes slideshow {
+    0% {
+        transform: translateX(0);
+    }
+    16.7% {
+        transform: translateX(-100%);
+    }
+    33% {
+        transform: translateX(-200%);
+    }
+    50% {
+        transform: translateX(-300%);
+    }
+    67% {
+        transform: translateX(-400%);
+    }
+    84% {
+        transform: translateX(-500%);
+    }
+    100% {
+        transform: translateX(-600%);
+    }
+}
